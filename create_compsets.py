@@ -12,11 +12,11 @@ dimasset = dimasset.merge(assetdetailactive, on='AssetCode')
 # Streamlit UI
 st.title("HelloData Comp Set Finder")
 
-asset_names = dimasset['AssetName']
+asset_names = sorted(set(dimasset['ParentAssetName']))
 
 selected_asset = st.selectbox(label="Select Asset", options=asset_names)
 
-selected_asset_info = dimasset[dimasset['AssetName'] == selected_asset]
+selected_asset_info = dimasset[dimasset['ParentAssetName'] == selected_asset]
 
 lat = selected_asset_info['Latitude'].values[0]
 lon = selected_asset_info['Longitude'].values[0]
