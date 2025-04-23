@@ -31,7 +31,6 @@ st.markdown(f"""
 st.sidebar.header("Optional Parameters")
 params = {
     "topN": st.sidebar.number_input("Number of Comps", value=10, step=1, format="%d", max_value=20),
-    "renovations": st.sidebar.slider("Renovations (0 to 1)", 0.0, 1.0, value=0.0),
     "maxDistance": st.sidebar.number_input("Max Distance (miles)", value=10.0, step=1.0),
     "minDistance": st.sidebar.number_input("Min Distance (miles)", value=0.0, step=1.0),
     "minNumberUnits": st.sidebar.number_input("Min Number of Units", value=num_units-50, step=1),
