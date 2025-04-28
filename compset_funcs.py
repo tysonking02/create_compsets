@@ -98,8 +98,8 @@ def aggregate_comps(comps_json, property_details):
 
         comps_df = pd.concat([comps_df, pd.DataFrame([{
             'Property Name': property_name,
-            'Similarity Score': similarity_score,
-            'Distance (Mi.)': distance,
+            'Similarity Score': round(similarity_score, 3),
+            'Distance (Mi.)': round(distance, 2),
             'Year Built': year_built,
             'Number of Units': number_units,
             'Number of Stories': number_stories,
